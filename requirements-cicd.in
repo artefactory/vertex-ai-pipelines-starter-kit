@@ -1,0 +1,17 @@
+kfp
+#==1.8.9
+black==21.6b0
+flake8==3.9.0
+flake8-docstrings==1.6.0
+pytest-cov~=2.5
+pytest-mock>=1.7.1, <2.0
+pytest~=6.1.2
+isort==5.8.0
+fsspec==2022.02.0
+gcsfs==2022.02.0
+pyxlsb==1.0.9
+openpyxl==3.0.9
+m2r2==0.3.2
+sphinx==4.4.0
+sphinx_rtd_theme==1.0.0
+mistune==0.8.4

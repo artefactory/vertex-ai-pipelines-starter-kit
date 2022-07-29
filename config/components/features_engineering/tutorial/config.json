@@ -1,0 +1,4 @@
+{
+    "time_columns_categorical": ["dayofweek", "month", "weekend", "year_month"],
+    "validation_start_date" : "2016-04-01"
+}

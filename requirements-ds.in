@@ -1,0 +1,19 @@
+# General
+pip-tools==6.2.0
+pre-commit==2.12.1
+# DS
+pandas==1.3.1
+pyarrow==5.0.0
+google-cloud-bigquery==2.26.0
+google-cloud-aiplatform==1.9.0
+matplotlib==3.4.3
+google_cloud_storage==1.42.2
+seaborn==0.11.2
+catboost==0.26.1
+shap==0.39.0
+xgboost==1.4.2
+pandas_gbq==0.16.0
+loguru==0.5.3
+pot==0.8.1.0
+lightgbm==3.3.2
+statsmodels==0.13.2

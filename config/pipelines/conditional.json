@@ -1,0 +1,10 @@
+{
+    "input_bucket_raw":"gs://vertex-pipelines-tutorial-raw",
+    "SERVICE_ACCOUNT_NAME": "yt-vertex-starter-kit",
+    "PIPELINE_ROOT": "gs://yt-carryovers-pipeline-runs-test",
+    "BUCKET_PIPELINE_CONFIGS": "yt-pipeline-configs",
+    "BUCKET_MODELS": "yt-models",
+    "objectives": ["regression", "regression_l1", "poisson"],
+    "FA_THRESHOLD": 0.52,
+    "validation_start_date": "2016-05-09"
+}

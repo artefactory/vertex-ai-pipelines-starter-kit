@@ -1,0 +1,9 @@
+{
+    "input_bucket_raw":"gs://vertex-pipelines-tutorial-raw",
+    "SERVICE_ACCOUNT_NAME": "yt-vertex-starter-kit",
+    "PIPELINE_ROOT": "gs://yt-carryovers-pipeline-runs-test",
+    "BUCKET_PIPELINE_CONFIGS": "yt-pipeline-configs",
+    "BUCKET_MODELS": "yt-models",
+    "DATASET":"vertex_pipeline_starter_kit",
+    "TABLE": "INFERENCE"
+}

@@ -1,0 +1,18 @@
+{
+    "unnecessary_cols" : ["date", "store_id", "state_id", "sales"],
+    "time_columns_categorical" : ["dayofweek", "month", "weekend", "year_month"],
+    "id_cols" : ["item_id", "dept_id", "cat_id", "store_id", "state_id"],
+    "cols_calendar2" : ["event_name_1",
+                        "event_type_1",
+                        "event_name_2",
+                        "event_type_2",
+                        "snap_CA",
+                        "snap_TX",
+                        "snap_WI"
+                    ],
+    "lgb_params" : { "metric": "rmse",
+                     "n_jobs": -1,
+                     "num_boost_round": 150,
+                     "objective": "regression"
+    }
+}

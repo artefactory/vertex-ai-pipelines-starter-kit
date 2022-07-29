@@ -1,0 +1,10 @@
+venv/
+tenv/
+testenv/
+data/
+notebooks/
+bin/
+docs/
+.ipynb_checkpoints/
+pipelines/runs/
+.git/

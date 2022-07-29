@@ -1,0 +1,5 @@
+[flake8]
+max-line-length=119
+docstring-convention=pep257
+ignore=E501,E121,E126,W503,W504,E203,D100,D401,D103,D104,E402,F841,W605
+exclude =notebooks/*
