@@ -19,7 +19,7 @@ attrs==21.4.0
 cachetools==4.2.4
     # via google-auth
 catboost==0.26.1
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 certifi==2021.10.8
     # via
     #   kfp-server-api
@@ -56,9 +56,10 @@ frozenlist==1.3.0
 fsspec==2021.10.1
     # via gcsfs
 gcsfs==2021.10.1
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 google-api-core[grpc]==2.7.1
     # via
+    #   google-api-core
     #   google-api-python-client
     #   google-cloud-appengine-logging
     #   google-cloud-bigquery
@@ -99,7 +100,7 @@ google-cloud-core==2.2.3
     #   google-cloud-logging
     #   google-cloud-storage
 google-cloud-logging==2.6.0
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 google-cloud-storage==1.44.0
     # via
     #   gcsfs
@@ -134,12 +135,12 @@ idna==3.3
     #   yarl
 joblib==1.0.1
     # via
-    #   -r components/base_images/forecasting/requirements.in
+    #   -r requirements.in
     #   scikit-learn
 jsonschema==3.2.0
     # via kfp
 kfp==1.8.2
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 kfp-pipeline-spec==0.1.13
     # via kfp
 kfp-server-api==1.8.1
@@ -148,10 +149,12 @@ kiwisolver==1.4.0
     # via matplotlib
 kubernetes==18.20.0
     # via kfp
+lightgbm==3.3.2
+    # via -r requirements.in
 llvmlite==0.38.0
     # via numba
 loguru==0.5.3
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 matplotlib==3.5.1
     # via catboost
 multidict==6.0.2
@@ -162,45 +165,52 @@ numba==0.55.1
     # via shap
 numpy==1.20.3
     # via
-    #   -r components/base_images/forecasting/requirements.in
+    #   -r requirements.in
     #   catboost
+    #   lightgbm
     #   matplotlib
     #   numba
     #   pandas
     #   pandas-schema
+    #   patsy
     #   pot
     #   pyarrow
     #   scikit-learn
     #   scipy
     #   shap
+    #   statsmodels
     #   xgboost
 oauthlib==3.2.0
     # via requests-oauthlib
 openpyxl==3.0.9
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 packaging==21.3
     # via
     #   google-cloud-appengine-logging
     #   google-cloud-bigquery
     #   google-cloud-logging
     #   matplotlib
+    #   statsmodels
 pandas==1.3.1
     # via
-    #   -r components/base_images/forecasting/requirements.in
+    #   -r requirements.in
     #   catboost
     #   pandas-gbq
     #   pandas-schema
     #   shap
+    #   statsmodels
 pandas-gbq==0.13.2
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 pandas-schema==0.3.5
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
+patsy==0.5.6
+    # via statsmodels
 pillow==9.0.1
     # via matplotlib
 plotly==5.6.0
     # via catboost
 pot==0.8.0
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 proto-plus==1.20.3
     # via
     #   google-cloud-appengine-logging
@@ -218,7 +228,7 @@ protobuf==3.19.4
     #   kfp-pipeline-spec
     #   proto-plus
 pyarrow==5.0.0
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 pyasn1==0.4.8
     # via
     #   pyasn1-modules
@@ -238,20 +248,20 @@ pyrsistent==0.18.1
     # via jsonschema
 python-dateutil==2.8.2
     # via
-    #   -r components/base_images/forecasting/requirements.in
+    #   -r requirements.in
     #   google-cloud-bigquery
     #   kfp-server-api
     #   kubernetes
     #   matplotlib
     #   pandas
 python-dotenv==0.19.1
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 pytz==2021.1
     # via
-    #   -r components/base_images/forecasting/requirements.in
+    #   -r requirements.in
     #   pandas
 pyxlsb==1.0.8
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 pyyaml==5.4.1
     # via
     #   kfp
@@ -273,19 +283,22 @@ requests-toolbelt==0.9.1
     # via kfp
 rsa==4.8
     # via google-auth
-scikit-learn==0.24.2
+scikit-learn==1.0.1
     # via
-    #   -r components/base_images/forecasting/requirements.in
+    #   -r requirements.in
+    #   lightgbm
     #   shap
 scipy==1.7.3
     # via
     #   catboost
+    #   lightgbm
     #   pot
     #   scikit-learn
     #   shap
+    #   statsmodels
     #   xgboost
 shap==0.39.0
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 six==1.16.0
     # via
     #   absl-py
@@ -299,10 +312,13 @@ six==1.16.0
     #   jsonschema
     #   kfp-server-api
     #   kubernetes
+    #   patsy
     #   plotly
     #   python-dateutil
 slicer==0.0.7
     # via shap
+statsmodels==0.13.2
+    # via -r requirements.in
 strip-hints==0.1.10
     # via kfp
 tabulate==0.8.9
@@ -315,7 +331,7 @@ threadpoolctl==3.1.0
     # via scikit-learn
 tqdm==4.62.2
     # via
-    #   -r components/base_images/forecasting/requirements.in
+    #   -r requirements.in
     #   shap
 typing-extensions==3.10.0.2
     # via
@@ -331,11 +347,13 @@ urllib3==1.26.8
 websocket-client==1.3.1
     # via kubernetes
 wheel==0.37.1
-    # via strip-hints
+    # via
+    #   lightgbm
+    #   strip-hints
 wrapt==1.14.0
     # via deprecated
 xgboost==1.4.2
-    # via -r components/base_images/forecasting/requirements.in
+    # via -r requirements.in
 yarl==1.7.2
     # via aiohttp
 
